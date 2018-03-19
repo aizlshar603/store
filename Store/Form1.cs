@@ -43,7 +43,6 @@ namespace Store
         {
             //try and catch for entering numbers 
             try
-
             {
                 dogsPurchased = Convert.ToInt16(dogInput.Text);
             }
@@ -85,6 +84,10 @@ namespace Store
             total = taxOnly + subTotal;
             totalOutPut.Text = total.ToString("C");
 
+        }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
             //tendered
             try
             {
@@ -95,11 +98,6 @@ namespace Store
                 catchLabel.Text = "You need to use a number.";
                 return;
             }
-        }
-
-        private void changeButton_Click(object sender, EventArgs e)
-        {
-         
             //change total
             changeTotal = tendered - total;
             changeOutPut.Text = changeTotal.ToString("C");
