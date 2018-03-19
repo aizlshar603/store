@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Store
 {
@@ -105,11 +106,42 @@ namespace Store
         }
 
         private void ReceiptButton_Click(object sender, EventArgs e)
+
         {
+           /* Graphics g = this.CreateGraphics();
+            Font drawFont = new Font("Arial", 10, FontStyle.Bold);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);
+            g.DrawString("Aizleas pet store!", drawFont, drawBrush, 200, 80);*/
+            
+            outputLabel.Text = "                    Aizleas Pet store!";
+           Thread.Sleep(500);
+            
+            outputLabel.Text += "\n     SubTotal = " + subTotal.ToString("C");
+           Thread.Sleep(500);
+
+            outputLabel.Text += "\n     Tax = " + tax.ToString("C");
+           Thread.Sleep(500);
+
+            outputLabel.Text += "\n     Total after tax = " + total.ToString("C");
+           Thread.Sleep(500);
+
+            outputLabel.Text += "\n     Tendered = " + tendered.ToString("C");
+           Thread.Sleep(500);
+
+            outputLabel.Text += "\n     Change due = " + changeTotal.ToString("C");
+           Thread.Sleep(1000);
+
+            outputLabel.Text += "\n                 Thank you, come again!";
+
 
         }
 
         private void newOrderButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void outputLabel_Click(object sender, EventArgs e)
         {
 
         }

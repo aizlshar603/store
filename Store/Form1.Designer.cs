@@ -101,6 +101,7 @@
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(323, 487);
             this.outputLabel.TabIndex = 5;
+            this.outputLabel.Click += new System.EventHandler(this.outputLabel_Click);
             // 
             // catchLabel
             // 
