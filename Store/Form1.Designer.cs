@@ -33,7 +33,6 @@
             this.catInput = new System.Windows.Forms.TextBox();
             this.fishInput = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
-            this.outputLabel = new System.Windows.Forms.Label();
             this.catchLabel = new System.Windows.Forms.Label();
             this.dogsLabel = new System.Windows.Forms.Label();
             this.catLabel = new System.Windows.Forms.Label();
@@ -93,15 +92,6 @@
             this.title.Size = new System.Drawing.Size(199, 49);
             this.title.TabIndex = 4;
             this.title.Text = "Pet Store";
-            // 
-            // outputLabel
-            // 
-            this.outputLabel.BackColor = System.Drawing.Color.White;
-            this.outputLabel.Location = new System.Drawing.Point(300, 104);
-            this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(323, 487);
-            this.outputLabel.TabIndex = 5;
-            this.outputLabel.Click += new System.EventHandler(this.outputLabel_Click);
             // 
             // catchLabel
             // 
@@ -247,7 +237,7 @@
             // 
             // newOrderButton
             // 
-            this.newOrderButton.Location = new System.Drawing.Point(347, 607);
+            this.newOrderButton.Location = new System.Drawing.Point(329, 370);
             this.newOrderButton.Name = "newOrderButton";
             this.newOrderButton.Size = new System.Drawing.Size(211, 40);
             this.newOrderButton.TabIndex = 22;
@@ -259,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(650, 659);
             this.Controls.Add(this.newOrderButton);
             this.Controls.Add(this.ReceiptButton);
@@ -278,7 +268,6 @@
             this.Controls.Add(this.catLabel);
             this.Controls.Add(this.dogsLabel);
             this.Controls.Add(this.catchLabel);
-            this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.title);
             this.Controls.Add(this.fishInput);
             this.Controls.Add(this.catInput);
@@ -298,7 +287,6 @@
         private System.Windows.Forms.TextBox catInput;
         private System.Windows.Forms.TextBox fishInput;
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Label catchLabel;
         private System.Windows.Forms.Label dogsLabel;
         private System.Windows.Forms.Label catLabel;

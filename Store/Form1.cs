@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace Store
 {
@@ -108,37 +109,33 @@ namespace Store
         private void ReceiptButton_Click(object sender, EventArgs e)
 
         {
-           /* Graphics g = this.CreateGraphics();
-            Font drawFont = new Font("Arial", 10, FontStyle.Bold);
-            SolidBrush drawBrush = new SolidBrush(Color.Black);
-            g.DrawString("Aizleas pet store!", drawFont, drawBrush, 200, 80);*/
-            
-            outputLabel.Text = "                    Aizleas Pet store!";
-           Thread.Sleep(500);
-            
-            outputLabel.Text += "\n     SubTotal = " + subTotal.ToString("C");
-           Thread.Sleep(500);
+            Graphics g = this.CreateGraphics();
+             Font drawFont = new Font("Arial", 10, FontStyle.Bold);
+            SolidBrush drawBrush = new SolidBrush(Color.White);            
+            g.FillRectangle(drawBrush, 200, 80, 300, 185);
+            SoundPlayer player = new SoundPlayer(Properties.Resources.LaserJet_Printer_SoundBible_com_1733940615__1_);
+            player.Play();
+            drawBrush.Color = Color.Black;
+             g.DrawString("Aizleas pet store!", drawFont, drawBrush, 250, 105);
+            Thread.Sleep(1000);
+             g.DrawString("Sub Total =" + subTotal, drawFont, drawBrush, 250, 135);
+            Thread.Sleep(1000);
+            g.DrawString("Tax =" + tax, drawFont, drawBrush, 250, 155);
+            Thread.Sleep(1000);
+            g.DrawString("Total =" + total, drawFont, drawBrush, 250, 175);
+            Thread.Sleep(1000);
+            g.DrawString("Change Total =" + changeTotal, drawFont, drawBrush, 250, 195);
+            Thread.Sleep(1000);
+            g.DrawString("Thank you, come again!", drawFont, drawBrush, 250, 225);
 
-            outputLabel.Text += "\n     Tax = " + tax.ToString("C");
-           Thread.Sleep(500);
-
-            outputLabel.Text += "\n     Total after tax = " + total.ToString("C");
-           Thread.Sleep(500);
-
-            outputLabel.Text += "\n     Tendered = " + tendered.ToString("C");
-           Thread.Sleep(500);
-
-            outputLabel.Text += "\n     Change due = " + changeTotal.ToString("C");
-           Thread.Sleep(1000);
-
-            outputLabel.Text += "\n                 Thank you, come again!";
 
 
         }
 
         private void newOrderButton_Click(object sender, EventArgs e)
         {
-            
+            Graphics g = this.CreateGraphics();
+            g.Clear(Color.PaleGreen);
         }
 
         private void outputLabel_Click(object sender, EventArgs e)
